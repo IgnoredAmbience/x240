@@ -1,0 +1,113 @@
+Module                  Size  Used by
+ctr                     3831  2 
+ccm                     7894  2 
+snd_hda_codec_hdmi     36379  1 
+cdc_mbim                5112  0 
+cdc_ncm                14068  1 cdc_mbim
+usbnet                 26834  2 cdc_mbim,cdc_ncm
+uvcvideo               72804  0 
+mii                     4027  1 usbnet
+cdc_acm                21753  0 
+videobuf2_vmalloc       3304  1 uvcvideo
+cdc_wdm                12019  1 cdc_mbim
+btusb                  19648  0 
+videobuf2_memops        2335  1 videobuf2_vmalloc
+bluetooth             326343  2 btusb
+videobuf2_core         28243  1 uvcvideo
+videodev              111840  2 uvcvideo,videobuf2_core
+media                  11719  2 uvcvideo,videodev
+joydev                  9631  0 
+mousedev               10247  0 
+iTCO_wdt                5407  0 
+iTCO_vendor_support     1929  1 iTCO_wdt
+arc4                    2000  2 
+intel_rapl             11776  0 
+x86_pkg_temp_thermal     6991  0 
+intel_powerclamp        8802  0 
+coretemp                6358  0 
+kvm                   396221  0 
+crct10dif_pclmul        4682  0 
+crct10dif_common        1372  1 crct10dif_pclmul
+crc32_pclmul            2923  0 
+crc32c_intel           14185  0 
+ghash_clmulni_intel     4405  0 
+aesni_intel            45548  4 
+aes_x86_64              7399  1 aesni_intel
+lrw                     3565  1 aesni_intel
+gf128mul                5858  1 lrw
+glue_helper             4417  1 aesni_intel
+ablk_helper             2004  1 aesni_intel
+cryptd                  8409  3 ghash_clmulni_intel,aesni_intel,ablk_helper
+rtsx_pci_sdmmc         13911  0 
+mmc_core               95465  1 rtsx_pci_sdmmc
+rtsx_pci_ms             7258  0 
+memstick                7504  1 rtsx_pci_ms
+nls_cp437               5953  1 
+vfat                   10055  1 
+fat                    51896  1 vfat
+iwlmvm                136123  0 
+mac80211              474681  1 iwlmvm
+microcode              15216  0 
+pcspkr                  2027  0 
+psmouse                88171  0 
+evdev                  11045  13 
+serio_raw               5009  0 
+iwlwifi               140193  1 iwlmvm
+rtsx_pci               32241  2 rtsx_pci_ms,rtsx_pci_sdmmc
+cfg80211              408199  3 iwlwifi,mac80211,iwlmvm
+i2c_i801               11269  0 
+snd_hda_codec_realtek    45115  1 
+lpc_ich                13368  0 
+i915                  725997  4 
+e1000e                222900  0 
+shpchp                 25425  0 
+ptp                     8244  1 e1000e
+pps_core                8833  1 ptp
+snd_hda_intel          37352  0 
+intel_agp              10872  1 i915
+wmi                     8251  0 
+snd_hda_codec         150017  3 snd_hda_codec_realtek,snd_hda_codec_hdmi,snd_hda_intel
+intel_gtt              12664  2 i915,intel_agp
+thinkpad_acpi          62120  1 
+drm_kms_helper         35710  1 i915
+tpm_tis                10590  0 
+snd_hwdep               6332  1 snd_hda_codec
+nvram                   5874  1 thinkpad_acpi
+snd_pcm                77822  3 snd_hda_codec_hdmi,snd_hda_codec,snd_hda_intel
+rfkill                 15651  4 cfg80211,thinkpad_acpi,bluetooth
+tpm                    23657  1 tpm_tis
+ac                      3334  0 
+battery                 7565  0 
+drm                   239102  3 i915,drm_kms_helper
+snd_page_alloc          7298  2 snd_pcm,snd_hda_intel
+snd_timer              18718  1 snd_pcm
+i2c_algo_bit            5391  1 i915
+i2c_core               24760  6 drm,i915,i2c_i801,drm_kms_helper,i2c_algo_bit,videodev
+mei_me                  9552  0 
+snd                    59029  8 snd_hda_codec_realtek,snd_hwdep,snd_timer,snd_hda_codec_hdmi,snd_pcm,snd_hda_codec,snd_hda_intel,thinkpad_acpi
+intel_rst               2180  0 
+mei                    62867  1 mei_me
+soundcore               5418  1 snd
+video                  11457  1 i915
+button                  4605  1 i915
+thermal                 8556  0 
+processor              24577  0 
+acpi_call               5224  0 
+ext4                  473451  1 
+crc16                   1359  2 ext4,bluetooth
+mbcache                 6074  1 ext4
+jbd2                   80912  1 ext4
+sd_mod                 31361  3 
+ehci_pci                3928  0 
+ahci                   23144  2 
+ehci_hcd               64363  1 ehci_pci
+xhci_hcd              144553  0 
+libahci                21698  1 ahci
+libata                172104  2 ahci,libahci
+scsi_mod              132250  2 libata,sd_mod
+usbcore               180208  10 btusb,uvcvideo,ehci_hcd,ehci_pci,usbnet,cdc_mbim,cdc_acm,cdc_ncm,cdc_wdm,xhci_hcd
+usb_common              1648  1 usbcore
+atkbd                  16806  0 
+libps2                  4187  2 atkbd,psmouse
+i8042                  13366  1 libps2
+serio                  10721  7 serio_raw,atkbd,i8042,psmouse
